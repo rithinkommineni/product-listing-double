@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mr. Bookstore</title>
+    <style>
+        body { background-color: #f0e68c; }
+        header, footer { background-color: #deb887; color: white; padding: 20px; text-align: center; }
+        .book { margin: 20px; padding: 20px; background-color: #fff8dc; }
+        .cart { cursor: pointer; background-color: #f4a460; color: white; padding: 10px 20px; border: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mr. Bookstore</h1>
+        <nav>
+            <button class="cart" onclick="addToCart()">Cart</button>
+        </nav>
+    </header>
+    
+    <section class="book">
+        <h2>Book Title 1 - $10</h2>
+        <img src="book1.jpg" alt="Book 1 image" style="width:100px;height:150px;">
+        <p>Summary of the book...</p>
+        <ul>
+            <li>Detail 1</li>
+            <li>Detail 2</li>
+        </ul>
+        <button class="cart" onclick="addToCart('Book Title 1')">Add to Cart</button>
+    </section>
+    <!-- Repeat for other books -->
+    
+    <footer>
+        <p>Location: 123 Book Street, Booktown</p>
+        <p>Contact us: (123) 456-7890</p>
+    </footer>
+
+    <script>
+        function addToCart(bookTitle = '') {
+            alert(bookTitle ? bookTitle + " added to cart!" : "Cart opened!");
+        }
+    </script>
+</body>
+</html>
